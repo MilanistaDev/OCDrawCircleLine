@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "DrawCircleLineView.h"
 
 @interface ViewController ()
 
@@ -14,10 +15,18 @@
 
 @implementation ViewController
 
+# pragma mark - Life cycle
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    
+    // Drawing Circle and Line
+    // Use full Scrren
+    DrawCircleLineView *drawView = [[DrawCircleLineView alloc] initWithFrame:self.view.bounds];
+    [self.view addSubview:drawView];
 }
+
+# pragma mark - Memory Warning
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

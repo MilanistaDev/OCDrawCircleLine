@@ -13,6 +13,8 @@
 		FD2BB70A1C846D960068FF99 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD2BB7081C846D960068FF99 /* Main.storyboard */; };
 		FD2BB70C1C846D960068FF99 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FD2BB70B1C846D960068FF99 /* Assets.xcassets */; };
 		FD2BB70F1C846D960068FF99 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD2BB70D1C846D960068FF99 /* LaunchScreen.storyboard */; };
+		FD2BB71A1C84734A0068FF99 /* DrawCircleLineView.m in Sources */ = {isa = PBXBuildFile; fileRef = FD2BB7191C84734A0068FF99 /* DrawCircleLineView.m */; };
+		FD2BB71E1C8474F00068FF99 /* DisplayUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = FD2BB71D1C8474F00068FF99 /* DisplayUtil.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,10 @@
 		FD2BB70B1C846D960068FF99 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FD2BB70E1C846D960068FF99 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FD2BB7101C846D960068FF99 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FD2BB7181C84734A0068FF99 /* DrawCircleLineView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrawCircleLineView.h; sourceTree = "<group>"; };
+		FD2BB7191C84734A0068FF99 /* DrawCircleLineView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrawCircleLineView.m; sourceTree = "<group>"; };
+		FD2BB71C1C8474F00068FF99 /* DisplayUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DisplayUtil.h; sourceTree = "<group>"; };
+		FD2BB71D1C8474F00068FF99 /* DisplayUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DisplayUtil.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,13 +64,12 @@
 		FD2BB6FE1C846D960068FF99 /* OCDrawCircleLine */ = {
 			isa = PBXGroup;
 			children = (
-				FD2BB7171C846F970068FF99 /* Controllers */,
-				FD2BB7161C846F710068FF99 /* Views */,
 				FD2BB7021C846D960068FF99 /* AppDelegate.h */,
 				FD2BB7031C846D960068FF99 /* AppDelegate.m */,
-				FD2BB7081C846D960068FF99 /* Main.storyboard */,
+				FD2BB7171C846F970068FF99 /* Controllers */,
+				FD2BB7161C846F710068FF99 /* Views */,
+				FD2BB71B1C84749D0068FF99 /* Utils */,
 				FD2BB70B1C846D960068FF99 /* Assets.xcassets */,
-				FD2BB70D1C846D960068FF99 /* LaunchScreen.storyboard */,
 				FD2BB7101C846D960068FF99 /* Info.plist */,
 				FD2BB6FF1C846D960068FF99 /* Supporting Files */,
 			);
@@ -82,6 +87,10 @@
 		FD2BB7161C846F710068FF99 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				FD2BB7081C846D960068FF99 /* Main.storyboard */,
+				FD2BB70D1C846D960068FF99 /* LaunchScreen.storyboard */,
+				FD2BB7181C84734A0068FF99 /* DrawCircleLineView.h */,
+				FD2BB7191C84734A0068FF99 /* DrawCircleLineView.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -93,6 +102,15 @@
 				FD2BB7061C846D960068FF99 /* ViewController.m */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		FD2BB71B1C84749D0068FF99 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				FD2BB71C1C8474F00068FF99 /* DisplayUtil.h */,
+				FD2BB71D1C8474F00068FF99 /* DisplayUtil.m */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -166,7 +184,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				FD2BB7071C846D960068FF99 /* ViewController.m in Sources */,
+				FD2BB71E1C8474F00068FF99 /* DisplayUtil.m in Sources */,
 				FD2BB7041C846D960068FF99 /* AppDelegate.m in Sources */,
+				FD2BB71A1C84734A0068FF99 /* DrawCircleLineView.m in Sources */,
 				FD2BB7011C846D960068FF99 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -180,6 +200,7 @@
 				FD2BB7091C846D960068FF99 /* Base */,
 			);
 			name = Main.storyboard;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		FD2BB70D1C846D960068FF99 /* LaunchScreen.storyboard */ = {
@@ -188,6 +209,7 @@
 				FD2BB70E1C846D960068FF99 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			path = ..;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
