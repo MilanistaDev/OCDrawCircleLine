@@ -21,7 +21,7 @@
 
 - (void)drawRect:(CGRect)rect {
     
-// Draw Circle
+// Draw Circle (CoreGraphics)
     // context
     CGContextRef contextCircle = UIGraphicsGetCurrentContext();
     CGRect rectEllipse;
@@ -46,13 +46,30 @@
 // Draw Line
     CGContextRef contextLine = UIGraphicsGetCurrentContext();
     // First Point(x, y)
-    CGContextMoveToPoint(contextLine, 30, 40);
+    CGContextMoveToPoint(contextLine, 30, 80);
     // Last Point(x ,y)
-    CGContextAddLineToPoint(contextLine, [DisplayUtil returnDisplaySize].width - 30, 40);
+    CGContextAddLineToPoint(contextLine, [DisplayUtil returnDisplaySize].width - 30, 80);
     // Line Color
     CGContextSetRGBStrokeColor(contextCircle, 1.0, 0.0, 0.0, 1.0);
     // Draw line
     CGContextStrokePath(contextLine);
+
+    
+// Triangle (UIBezierPath ver)
+    UIBezierPath *triangle = [UIBezierPath bezierPath];
+    
+    // Three vertexes
+    // Starting point
+    [triangle moveToPoint:CGPointMake(centerX, centerY + radius + 50)];
+    // Add Line
+    [triangle addLineToPoint:CGPointMake(centerX - 25, centerY + radius + 100)];
+    [triangle addLineToPoint:CGPointMake(centerX + 25, centerY + radius + 100)];
+    // Close Path
+    [triangle closePath];
+    [[UIColor blueColor] setStroke];
+    triangle.lineWidth = 2;
+    // Draw lines
+    [triangle stroke];
 }
 
 
